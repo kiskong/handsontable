@@ -4,7 +4,7 @@
   "homepage": "https://handsontable.com/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/handsontable/handsontable.git"
+    "url": "git+https://github.com/handsontable/handsontable.git"
   },
   "bugs": {
     "url": "https://github.com/handsontable/handsontable/issues"
@@ -108,7 +108,7 @@
     "supports-color": "^4.2.1",
     "tree-kill": "^1.2.1",
     "typescript": "^2.4.2",
-    "webpack": "^3.5.6"
+    "webpack": "^3.12.0"
   },
   "license": "MIT",
   "jest": {
@@ -127,5 +127,9 @@
       "\\.css$": "<rootDir>/test/__mocks__/styleMock.js"
     }
   },
-  "typings": "./handsontable.d.ts"
+  "typings": "./handsontable.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  }
 }

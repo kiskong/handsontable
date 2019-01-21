@@ -116,7 +116,9 @@ class ManualColumnFreeze extends BasePlugin {
 
     this.getMovePlugin().moveColumn(column, settings.fixedColumnsLeft);
 
-    settings.fixedColumnsLeft += 1;
+    //settings.fixedColumnsLeft += 1;
+    // 冻结选中列 
+    settings.fixedColumnsLeft = column;
   }
 
   /**
@@ -139,7 +141,11 @@ class ManualColumnFreeze extends BasePlugin {
     const returnCol = this.getBestColumnReturnPosition(column);
 
     priv.moveByFreeze = true;
-    settings.fixedColumnsLeft -= 1;
+
+    //settings.fixedColumnsLeft -= 1;
+
+    //取消冻结列
+    settings.fixedColumnsLeft = 0;
 
     this.getMovePlugin().moveColumn(column, returnCol + 1);
   }
